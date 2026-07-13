@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyACT.com | Sign In & Create Account</title>
+  <meta name="description" content="Sign in to MyACT or create an account to register for the ACT test, view scores, and manage your profile." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!-- Top brand bar -->
+  <header class="topbar" role="banner">
+    <div class="topbar__inner">
+      <a class="brand" href="#" aria-label="ACT Home">
+        <span class="brand__mark" aria-hidden="true">ACT</span>
+        <span class="brand__name">MyACT</span>
+      </a>
+      <nav class="topbar__nav" aria-label="Primary">
+        <a href="#help">Help</a>
+        <a href="#faqs">FAQs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main area -->
+  <main class="auth" id="main">
+    <div class="auth__container">
+      <!-- Create account card -->
+      <section class="card" aria-labelledby="create-title">
+        <div class="card__logo" aria-hidden="true">
+          <div class="logo-circle">ACT</div>
+        </div>
+        <h1 id="create-title" class="card__title">Welcome to MyACT</h1>
+        <p class="card__lead">
+          Don't have an account? Create yours today to register for the ACT,
+          view your scores, and send them to colleges.
+        </p>
+
+        <button class="btn btn--outline" type="button">Create MyACT account</button>
+
+        <div class="divider"><span>or</span></div>
+
+        <p class="card__sub">Have an Encourage account?</p>
+        <p class="card__muted">
+          That works here too — use the same username and password to log in.
+        </p>
+
+        <p class="note">
+          <span class="note__label">Note:</span>
+          Any information you enter in Encourage will be reflected here and on ACT score reports.
+        </p>
+      </section>
+
+      <!-- Sign in card -->
+      <section class="card" aria-labelledby="signin-title">
+        <h2 id="signin-title" class="card__title">Sign in to your account</h2>
+        <p class="card__lead">Enter your credentials to access your MyACT dashboard.</p>
+
+        <form class="form" novalidate>
+          <div class="field">
+            <div class="field__row">
+              <label for="email">Email address</label>
+              <a class="field__link" href="#forgot-email">Forgot email?</a>
+            </div>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+
+          <div class="field">
+            <div class="field__row">
+              <label for="password">Password</label>
+              <a class="field__link" href="#forgot-password">Forgot password?</a>
+            </div>
+            <input id="password" name="password" type="password" autocomplete="current-password" required />
+          </div>
+
+          <button class="btn btn--primary" type="submit">Sign In</button>
+
+          <aside class="notice" role="note">
+            ACT is improving Customer Support access to your web account by
+            removing Google Single Sign-On functionality from MyACT. If you
+            used this feature, please click the
+            <a href="#forgot-password"><strong>forgot password</strong></a>
+            link above to update your account.
+          </aside>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <a class="footer__primary" href="#help">Need Help?</a>
+      <p class="footer__links">
+        See <a href="#faqs">FAQs</a> or <a href="#contact">Contact us</a>
+      </p>
+      <p class="footer__copy">© <span id="year"></span> ACT, Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- <script>document.getElementById('year').textContent = new Date().getFullYear();</script> -->
+</body>
+</html>
